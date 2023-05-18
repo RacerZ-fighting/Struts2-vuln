@@ -1,0 +1,7 @@
+1. Struts <= 2.3.1 CookieInterceptor RCE:
+CookieInterceptor拦截器对参数名并没有被应用acceptedParamNames，但tomcat自身对cookie参数名的限制过多
+public static final char SEPARATORS[] = { '\t', ' ', '\"', '(', ')', ',', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '{', '}' };
+
+2. Struts <= 2.3.17 DebuggingInterceptor RCE
+debug=console
+debug=debug=command&expression=<OGNL expression>

